@@ -45,14 +45,14 @@ function isInt(n){
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 mb.app.on('ready', function() {
-  const debugWindow = new BrowserWindow({
-      width  : 400,
-      height : 460,
-      type   : 'desktop',
-      frame  : true
-    });
-
-  debugWindow.loadUrl('http://localhost:3000')
+  // const debugWindow = new BrowserWindow({
+  //     width  : 400,
+  //     height : 460,
+  //     type   : 'desktop',
+  //     frame  : true
+  //   });
+  //
+  // debugWindow.loadUrl('http://localhost:3000')
   // mb.window.setSize(400, 460)
   // mb.window.loadUrl('http://localhost:3000')
 
