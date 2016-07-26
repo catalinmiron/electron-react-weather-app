@@ -2,7 +2,7 @@ Electron React WeatheReact app <span class="badge-paypal"><a href="https://www.p
 -----
 ![background](https://cloud.githubusercontent.com/assets/2805320/17155344/60b692e2-538d-11e6-8f32-8f7132b9cecd.png)
 
-##[Youtube DEMO](https://www.youtube.com/watch?v=FAZLX_5hS2s)
+##[Youtube DEMO](https://www.youtube.com/watch?v=FAZLX_5hS2s) | [Download](https://github.com/catalinmiron/electron-react-weather-app/releases)
 
 
 Browser version
