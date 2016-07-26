@@ -13,7 +13,7 @@
     "postinstall": "install-app-deps",
     "pack": "build --dir",
     "dist": "build",
-    "release": "hdiutil create -format UDZO -volname WeatheReact -srcfolder release/darwin-x64/WeatheReact-darwin-x64/ dist/WeatheReact-$npm_package_version-osx.dmg"
+    "release": "hdiutil create -format UDZO -volname WeatheReact -srcfolder release/darwin-x64/WeatheReact-darwin-x64/ WeatheReact-$npm_package_version-osx.dmg"
   },
   "bin": {
     "electron": "./node_modules/.bin/electron"
