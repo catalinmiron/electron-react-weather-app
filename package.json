@@ -9,10 +9,42 @@
     "deploy": "npm run build && surge -p dist -d javascript.xyz",
     "run": "electron -r babel/register .",
     "package": "NODE_ENV=production node package.js",
-    "package-all": "npm run package -- --all"
+    "package-all": "npm run package -- --all",
+    "postinstall": "install-app-deps",
+    "pack": "build --dir",
+    "dist": "build",
+    "release": "hdiutil create -format UDZO -volname WeatheReact -srcfolder release/darwin-x64/WeatheReact-darwin-x64/ dist/WeatheReact-$npm_package_version-osx.dmg"
   },
   "bin": {
     "electron": "./node_modules/.bin/electron"
+  },
+  "build": {
+    "appId": "org.BatmanCodes.WeatheReact",
+    "app-category-type": "public.app-category.weather-icon-small",
+    "dmg": {
+      "contents": [
+        {
+          "x": 410,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 130,
+          "y": 150,
+          "type": "file"
+        }
+      ]
+    },
+    "win": {
+      "remoteReleases": "https://github.com/catalinmiron/electron-react-weather-app"
+    },
+    "linux": {
+      "target": [
+        "deb",
+        "AppImage"
+      ]
+    }
   },
   "repository": {
     "type": "git",
@@ -29,6 +61,7 @@
     "babel-loader": "^5.2.2",
     "css-loader": "^0.15.1",
     "del": "^2.0.2",
+    "electron-builder": "^5.16.0",
     "electron-packager": "^5.1.0",
     "file-loader": "^0.8.4",
     "json-loader": "^0.5.2",
