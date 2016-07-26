@@ -1,0 +1,72 @@
+{
+  "name": "weathereact",
+  "version": "1.0.0",
+  "description": "Reactjs app using Open Weather API - http://openweathermap.org/api",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack",
+    "deploy": "npm run build && surge -p dist -d javascript.xyz",
+    "run": "electron -r babel/register .",
+    "package": "NODE_ENV=production node package.js",
+    "package-all": "npm run package -- --all"
+  },
+  "bin": {
+    "electron": "./node_modules/.bin/electron"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/catalinmiron/weathereact"
+  },
+  "author": "Catalin Miron",
+  "license": "MIT",
+  "devDependencies": {
+    "asar": "^0.8.0",
+    "autoprefixer": "^5.2.0",
+    "autoprefixer-core": "^5.2.1",
+    "babel": "^5.6.14",
+    "babel-core": "^5.6.15",
+    "babel-loader": "^5.2.2",
+    "css-loader": "^0.15.1",
+    "del": "^2.0.2",
+    "electron-packager": "^5.1.0",
+    "file-loader": "^0.8.4",
+    "json-loader": "^0.5.2",
+    "minimist": "^1.2.0",
+    "node-libs-browser": "^0.5.2",
+    "object-assign": "^4.0.1",
+    "postcss-loader": "^0.5.1",
+    "react": "^0.13.3",
+    "react-hot-loader": "^1.2.7",
+    "style-loader": "^0.12.3",
+    "stylus-loader": "^1.2.1",
+    "url-loader": "^0.5.6",
+    "yeticss": "^6.0.7"
+  },
+  "dependencies": {
+    "auto-launch": "^0.1.19",
+    "autoprefixer-core": "^5.2.1",
+    "babel": "^5.6.14",
+    "babel-loader": "^5.2.2",
+    "css-loader": "^0.15.1",
+    "electron-prebuilt": "^0.34.1",
+    "hjs-webpack": "^3.1.0",
+    "json-loader": "^0.5.2",
+    "lodash": "^3.10.1",
+    "menubar": "^2.3.0",
+    "moment": "^2.10.6",
+    "postcss-loader": "^0.5.1",
+    "randomcolor": "^0.3.0",
+    "react-hot-loader": "^1.2.7",
+    "react-number-easing": "0.0.3",
+    "react-skycons": "^0.1.0",
+    "style-loader": "^0.12.3",
+    "stylus-loader": "^1.2.1",
+    "url-loader": "^0.5.6",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.1",
+    "webpack-target-electron-renderer": "^0.1.1",
+    "whatwg-fetch": "^0.9.0",
+    "yeticss": "^6.0.7"
+  }
+}

@@ -1,0 +1,248 @@
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900);
+
+body {
+  font-family: "Lato", Helvetica Neue, Helvetica, sans-serif;
+
+  fieldset {
+    border-color: black;
+    padding: 0 20px;
+    overflow: hidden;
+  }
+
+  legend {
+    color: black;
+    text-align: left;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  form {
+    padding: 0 20px;
+    margin: 0;
+    margin-top: 20px;
+  }
+  .form-input {
+    font-family: "Lato", Helvetica Neue, Helvetica, sans-serif;
+    background: transparent;
+    box-shadow: 0 none;
+    border: 0 none;
+    padding: 5px 0;
+    color: black;
+    border-radius: 0;
+    font-size: 32px;
+    outline: none;
+
+    &:focus,
+    &:active {
+      box-shadow: none;
+      border: 0 none;
+    }
+  }
+}
+
+
+.weather-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: block;
+    opacity: .9;
+    background-color: white;
+  }
+
+  form,
+  .week-container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .copyrights {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 15px;
+    z-index: 9999;
+    background: #f3f3f3;
+
+    a {
+      color: #999;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color .3s ease;
+      display: inline-block;
+      margin-left: 5px;
+
+      &:hover,
+      &:active,
+      &:visited {
+        color: #000;
+      }
+    }
+  }
+}
+
+.weather-item {
+  height: 100%;
+  text-align: center;
+  color: black;
+  position: relative;
+
+  .location {
+    font-size: 22px;
+    padding-top: 25px;
+    font-weight: 700;
+    line-height: 1em;
+    margin-top: 0;
+    margin-bottom: .5em;
+
+    .city {}
+    .country {}
+  }
+
+  .timestamp {
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 1em;
+    margin: 0;
+  }
+
+  &:not(.small) {
+    padding-left: 200px;
+
+    canvas {
+      position: absolute;
+      top: 50%;
+      left: 110px;
+      transform: translate(-50%, -50%) !important;
+      width: 250px;
+      opacity: 1;
+    }
+  }
+
+  .temperature {
+    font-weight: 100;
+    line-height: 1em;
+    margin: 0;
+    font-size: 72px;
+  }
+
+  .info {
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  &.small {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    flex-wrap: wrap;
+    aling-items: flex-start;
+    justify-content: flex-start;
+
+    .info,
+    .location {
+      display: none;
+    }
+
+    .timestamp {
+      order: 1;
+      display: flex;
+      flex: 1;
+      align-self: center;
+      font-size: 16px;
+      font-weight: 300;
+      margin-top: .5em;
+      margin-bottom: 1em;
+    }
+
+    .temperature-info {
+      display: flex;
+      flex: 2;
+      align-self: center;
+      order: 3;
+    }
+
+    .temperature {
+      font-size: 16px;
+      font-weight: 300;
+    }
+
+    canvas {
+      width: 100%;
+      margin-bottom: 10px;
+      order: 2;
+      align-self: center;
+    }
+  }
+}
+
+
+.week-container {
+  height: 325px;
+  overflow: hidden;
+  margin: 0;
+
+  .week-current-day {
+    height: calc(325px - 125px);
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .week-all-days {
+    overflow: hidden;
+    width: 100%;
+    height: 125px;
+  }
+
+  .week-one-day {
+    display: flex;
+    flex-direction: row;
+
+    float: left;
+    width: calc(100% / 7);
+    height: 100%;
+  }
+}
+
+for num in ( 1..7 )
+ .week-one-day:nth-child({num})
+    background rgba(0,0,0,(num / 40))
+
+.week-one-day:nth-child(1) {
+  background: rgba(0, 0, 0, .025)
+}
+.week-one-day:nth-child(2) {
+  background: rgba(0, 0, 0, .05)
+}
+.week-one-day:nth-child(3) {
+  background: rgba(0, 0, 0, .075)
+}
+.week-one-day:nth-child(4) {
+  background: rgba(0, 0, 0, .1)
+}
+.week-one-day:nth-child(5) {
+  background: rgba(0, 0, 0, .125)
+}
+.week-one-day:nth-child(6) {
+  background: rgba(0, 0, 0, .15)
+}
+.week-one-day:nth-child(7) {
+  background: rgba(0, 0, 0, .175)
+}
