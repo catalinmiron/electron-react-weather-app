@@ -20,3 +20,5 @@ Another weather app build with Reactjs usign [Open Weather API](http://openweath
 - Install node packages `npm install`
 - Serve it locally `npm start`
 - Open electron `npm run run`
+
+_Background image from [pexels.com](https://www.pexels.com/photo/snow-landscape-mountains-nature-59106/)_
